@@ -1,0 +1,55 @@
+﻿.sectionTitulo p {
+    background-color: gray;
+    color: #555;
+    padding: 5px;
+    width: 100%;
+    color: white;
+}
+
+.sectionSubTitulo p {
+    background-color: lightgray;
+    color: #555;
+    padding: 3px;
+    width: 100%;
+}
+
+
+.sectionDetalleEventoImg {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    color: #555
+}
+
+.sectionDetalleEventoImg img {
+    max-width: 100%;
+}
+
+.sectionDetalleEventoDatos {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    color: #555
+}
+
+.sectionProducto {
+    width: 30%;
+    float: right;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    .sectionDetalleEventoImg {
+        width: 100%;
+    }
+
+    .sectionDetalleEventoDatos {
+        width: 100%;
+    }
+
+    .sectionProducto {
+        width: 100%;
+    }
+}

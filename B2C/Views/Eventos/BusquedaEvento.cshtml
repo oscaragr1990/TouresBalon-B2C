@@ -1,0 +1,51 @@
+﻿@model IEnumerable<B2C.Models.Evento>
+
+<div class="row">
+
+
+    <link href="~/Content/evento.css" rel="stylesheet" />
+    <div id="sectionTop5">
+        @using (Html.BeginForm("BusquedaEvento"))
+        {
+            <p>Busqueda por:</p>
+            <div>
+                <div class="inputText">Codigo:@Html.TextBox("inCodigo")</div>
+                <div class="inputText">
+                    Descripcion:@Html.TextArea("inDescripcion")
+                </div>
+                <div class="inputText">
+                    Nombre:@Html.TextBox("inNombre")
+                </div>
+                <div class="inputText">
+                    Ciudad:
+                    @Html.TextBox("inCiudad")
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+    <div id="sectionEventos">
+        <div class="container">
+
+            <div class="row">
+                @foreach (var item in Model)
+            {
+
+                    <div class="evento col-md-2">
+                        <a class="thumbnail" href="@Url.Action("VerDetalleEvento", "Eventos", new { inCodigo = item.Nombre })">
+                            <p>@Html.DisplayFor(modelItem => item.Nombre)</p>
+                            <img src="~/resource_/images/campanya/alexander-londono-322213.jpg" alt="@Html.DisplayFor(modelItem => item.Nombre)">
+                            <p>@Html.DisplayFor(modelItem => item.Fecha) </p>
+                            <p>@Html.DisplayFor(modelItem => item.Ciudad)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Precio)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Codigo)</p>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>

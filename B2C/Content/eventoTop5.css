@@ -1,0 +1,8 @@
+﻿#sectionTop5 #top5 .item {
+    float: right;
+    padding: 2px;
+
+}
+    #sectionTop5 #top5 .item img {
+        max-width: 100%;
+    }

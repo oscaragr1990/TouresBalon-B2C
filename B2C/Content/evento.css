@@ -1,0 +1,81 @@
+﻿.row #sectionEventos {
+    width: 80%;
+    float: right;
+    padding: 5px;
+}
+
+#sectionEventos .container .row .evento {
+    padding: 5px;
+}
+
+    #sectionEventos .container .row .evento p {
+        margin: 0px;
+        font-size: 12px;
+    }
+
+.row #sectionTop5 {
+    background-color: lightgray;
+    float: left;
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+}
+
+#sectionTop5 .inputText input ,textarea {
+    display: block;
+    width: 90%;
+
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    margin: 10px;
+
+}
+
+
+#sectionTop5 {
+    padding: 10px;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .row #sectionTop5 {
+        float: none;
+        width: 100%;
+        height: auto;
+        position: inherit;
+    }
+
+    .row #sectionEventos {
+        width: 100%;
+        float: none;
+        padding: 5px;
+        position: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .row #sectionTop5 {
+        float: none;
+        width: 100%;
+        height: auto;
+        position: inherit;
+    }
+
+    .row #sectionEventos {
+        width: 100%;
+        float: none;
+        padding: 5px;
+        position: inherit;
+    }
+}

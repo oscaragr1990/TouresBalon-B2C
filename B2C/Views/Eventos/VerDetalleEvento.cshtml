@@ -1,0 +1,80 @@
+﻿@model B2C.Models.Evento
+<link href="~/Content/DetalleEvento.css" rel="stylesheet" />
+<div>
+    <div class="sectionTitulo">
+        <p>
+            <strong>
+                @Html.DisplayFor(model => model.Nombre) | @Html.DisplayFor(model => model.Codigo)
+            </strong>
+        </p>
+    </div>
+
+    <p>
+        @Html.ActionLink("Eventos", "Index")
+    </p>
+
+    <div class="sectionDetalleEventoImg">
+        <img src="~/resource_/images/campanya/alexander-londono-322213.jpg" />
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="sectionDetalleEventoDatos">
+        <div class="sectionSubTitulo">
+            <p><strong>Datos</strong></p>
+        </div>
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ciudad)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Imagen)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tipo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="sectionProducto">
+    </div>
+</div>
+

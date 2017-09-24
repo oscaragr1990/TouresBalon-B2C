@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Bienvenido";
+}
+<link href="~/Content/evento.css" rel="stylesheet" />
+
+    <div class="row">
+        <div id="sectionEventos">
+        </div>
+        <div id="sectionTop5">
+        </div>
+    </div>
+
+    @section scripts
+{
+        <script>
+        $(function () {
+            $.ajax({
+                url: "@Url.Content("~/Eventos/BusquedaEvento")"
+            }).done(function (data) {
+                $('#sectionEventos').html(data);
+            }).fail(function () {
+                alert("error");
+                });
+            $.ajax({
+                url: "@Url.Content("~/Eventos/ListTop5")"
+            }).done(function (data) {
+                $('#sectionTop5').html(data);
+            }).fail(function () {
+                alert("error");
+            });
+        });
+        </script>
+}
